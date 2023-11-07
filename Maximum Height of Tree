@@ -1,0 +1,6 @@
+int maxHeightOfTree(TreeNode* root){
+if(!root) return 0;
+int left = maxHeightOfTree(root->left);
+int right = maxHeightOfTree(root->right);
+return 1+max(left,right);
+}
